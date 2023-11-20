@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tukar Poin</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        form {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #3498db;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tukar Poin</h1>
+    <!-- Formulir untuk tukar poin -->
+    <form id="tukarPoinForm">
+        <label for="alamatPengguna">Alamat Pengguna:</label>
+        <input type="text" id="alamatPengguna" required>
+        <label for="jumlahPoin">Jumlah Poin:</label>
+        <input type="number" id="jumlahPoin" required>
+        <button type="button" onclick="tukarPoin()">Tukar Poin</button>
+    </form>
+
+    <!-- Form untuk cek saldo pengguna -->
+    <h2>Cek Point</h2>
+    <form id="cekSaldoForm">
+        <label for="userAddressCekSaldo">Alamat Pengguna:</label>
+        <input type="text" id="userAddressCekSaldo" required>
+        <button type="button" onclick="cekSaldo()">Cek Saldo</button>
+    </form>
+    
+    <!-- Status dan informasi -->
+    <h2>Status Tukar Poin</h2>
+    <div id="statusTukarPoin" class="status"></div>
+    
+    <!-- Status dan informasi Cek Saldo -->
+    <h2>jumlah point</h2>
+    <div id="statusCekSaldo" class="status"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="frontend.js"></script>
+</body>
+
+</html>
